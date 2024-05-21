@@ -30,12 +30,12 @@ const Register = () => {
   }
   const submitHandler = async e => {
     e.preventDefault()
-    setLoading(true)
     const id = toast.loading('Registering...')
     let validationMsg = ''
     validationMsg = nameValidator(name) || passwordValidator(password) || ''
-    if (validationMsg !== '') return toast.error(validationMsg)
-    if (!chaviFile) return toast.error('Please upload Chavi')
+    if (validationMsg !== '') return toast.error(validationMsg, { id })
+    if (!chaviFile) return toast.error('Please upload Chavi', { id })
+    setLoading(true)
     const formData = new FormData()
     formData.set('name', name)
     formData.set('email', email)
