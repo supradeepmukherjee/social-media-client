@@ -6,24 +6,6 @@ const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: `${server}/user` }),
     tagTypes: ['user', 'post'],
     endpoints: ({ mutation, query }) => ({
-        register: mutation({
-            query: data => ({
-                url: `/register`,
-                method: `POST`,
-                body: data,//file
-                credentials: 'include'
-            }),
-            invalidatesTags: ['user']
-        }),
-        login: mutation({
-            query: ({ email, password }) => ({
-                url: `/login`,
-                method: `POST`,
-                body: { email, password },
-                credentials: 'include'
-            }),
-            invalidatesTags: ['user']
-        }),
         getUser: query({
             query: () => ({
                 url: '/myProfile',
