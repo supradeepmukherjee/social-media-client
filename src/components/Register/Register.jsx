@@ -15,7 +15,7 @@ const Register = () => {
   const [name, setName] = useState('')
   const [chavi, setChavi] = useState(null)
   const [chaviFile, setChaviFile] = useState(null)
-  const [loading,setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
   const { user } = useSelector(({ auth }) => auth)
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -30,6 +30,7 @@ const Register = () => {
   }
   const submitHandler = async e => {
     e.preventDefault()
+    setLoading(true)
     const id = toast.loading('Registering...')
     let validationMsg = ''
     validationMsg = nameValidator(name) || passwordValidator(password) || ''
