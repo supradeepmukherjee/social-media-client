@@ -109,4 +109,4 @@ const api = createApi({
 })
 
 export default api
-export const { useAllUsersQuery, useLazyAllUsersQuery, useChangePasswordMutation, useForgotPasswordMutation, useGetUserProfileQuery, useLazyGetUserProfileQuery, useGetUserQuery, useLoginMutation, useRegisterMutation, useResetPasswordMutation, useUpdateProfileMutation, useLazyGetUserQuery, useFollowMutation, useDelProfileMutation, useMyPostsQuery, useLazyMyPostsQuery, useUserPostsQuery, useUploadMutation, useUpdateCaptionMutation } = api
+export const { useAllUsersQuery, useLazyAllUsersQuery, useChangePasswordMutation, useForgotPasswordMutation, useGetUserProfileQuery, useLazyGetUserProfileQuery, useGetUserQuery,  useResetPasswordMutation, useUpdateProfileMutation, useLazyGetUserQuery, useFollowMutation, useDelProfileMutation, useMyPostsQuery, useLazyMyPostsQuery, useUserPostsQuery, useUploadMutation, useUpdateCaptionMutation } = api
